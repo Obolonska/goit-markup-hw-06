@@ -50,46 +50,80 @@
             </li>
           </ul>
         </address>
-        <button type="button">
-          <svg class="header-icon" width="24" height="24">
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-hero-menu"></use>
           </svg>
         </button>
       </div>
-      <div class="mob-menu">
-        <button type="button" class="mob-menu-close">
-          <svg class="icon-close" width="8" height="8">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-        <ul class="mob-nav-list">
-          <li class="mob-nav-item">
-            <a class="mob-nav-link" href="./index.html">Studio</a>
-          </li>
-          <li class="mob-nav-item"><a class="mob-nav-link" href="">Portfolio</a></li>
-          <li class="mob-nav-item"><a class="mob-nav-link" href="">Contacts</a></li>
-        </ul>
-      </nav>
-      <address class="mob-contacts">
-        <ul class="mob-contacts-list">
-          <li class="mob-contacts-item">
-            <a class="mob-contacts-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="mob-contacts-item">
-            <a class="mob-contacts-link" href="tel:+110001111111"
-              >+11 (000) 111-11-11</a
-            >
-          </li>
-        </ul>
-      </address>
+
+      <div class="mob-menu is-open" data-menu>
+        <div class="container mob-menu-conteiner">
+          <button type="button" class="mob-menu-close" data-menu-close>
+            <svg class="icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mob-nav">
+            <ul class="mob-nav-list">
+              <li class="mob-nav-item">
+                <a class="mob-nav-link" href="./index.html">Studio</a>
+              </li>
+              <li class="mob-nav-item">
+                <a class="mob-nav-link" href="">Portfolio</a>
+              </li>
+              <li class="mob-nav-item">
+                <a class="mob-nav-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mob-contacts">
+            <ul class="mob-contacts-list">
+              <li class="mob-contacts-item">
+                <a class="mob-contacts-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mob-contacts-item">
+                <a class="mob-contacts-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="conteiner-menu-social">
+            <ul class="menu-social">
+              <li class="menu-social-item">
+                <a class="menu-social-link" href=""
+                  ><svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use></svg
+                ></a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href=""
+                  ><svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use></svg
+                ></a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href=""
+                  ><svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use></svg
+                ></a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-social-link" href=""
+                  ><svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
-
     <main>
-
       <section class="hero">
         <div class="container container-hero">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -599,5 +633,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
