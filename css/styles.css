@@ -318,13 +318,22 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/mob-bg-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 320px;
   margin: 0 auto;
   background-position: center;
   padding: 72px 0;
+}
+@media screen and (min-resolution: 2x) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mob-bg-2x-min.jpg);
+  }
 }
 .container-hero {
   justify-content: center;
@@ -370,7 +379,22 @@ button {
   .hero {
     max-width: 768px;
     padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tab-bg-min.jpg);
   }
+  @media screen and (min-resolution: 2x) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tab-bg-2x-min.jpg);
+    }
+  }
+
   .hero-title {
     margin-bottom: 36px;
     max-width: 496px;
@@ -382,12 +406,26 @@ button {
   .hero {
     max-width: 1440px;
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-bg-min.jpg);
   }
-  .hero-title {
-    margin-bottom: 48px;
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
+  @media screen and (min-resolution: 2x) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-bg-2x-min.jpg);
+    }
+    .hero-title {
+      margin-bottom: 48px;
+      max-width: 496px;
+      font-size: 56px;
+      line-height: 1.07;
+    }
   }
 }
 /*-----------ABOUT-------------- */
@@ -567,7 +605,6 @@ button {
   fill: #f4f4fd;
 }
 
-.social-link:hover,
 .social-link:focus {
   background-color: #404bbf;
 }
@@ -594,6 +631,9 @@ button {
   .team-item {
     width: calc((100% - 72px) / 4);
   }
+  .social-link:hover {
+    background-color: #404bbf;
+  }
 }
 /*-----------PORTFOLIO------------- */
 
@@ -601,18 +641,14 @@ button {
   padding-top: 96px;
   padding-bottom: 96px;
 }
-.container-portfolio {
-  /* display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  gap: 48px; */
-}
 
 .container-portfolio-item {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   border-top: none;
 }
+
 .portfolio-title {
   margin-bottom: 72px;
   font-weight: 700;
@@ -650,11 +686,9 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-cover-text,
 .portfolio-item:focus .portfolio-cover-text {
   transform: translateY(0);
 }
-.portfolio-item:hover,
 .portfolio-item:focus {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -694,7 +728,18 @@ button {
   .portfolio-item {
     width: calc((100% - 48px) / 3);
   }
+  .container-portfolio-item {
+    box-shadow: none;
+  }
+  .portfolio-item:hover .portfolio-cover-text {
+    transform: translateY(0);
+  }
+  .portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
 }
+
 /*-----------FOOTER-------------- */
 
 .footer {
@@ -758,7 +803,7 @@ button {
   fill: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-link:hover,
+
 .footer-social-link:focus {
   background-color: #31d0aa;
 }
@@ -854,6 +899,9 @@ button {
   .footer-subscribe {
     margin-left: auto;
   }
+  .footer-social-link:hover {
+    background-color: #31d0aa;
+  }
 }
 
 /* -------Modal--------- */
@@ -882,8 +930,9 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+
+  width: 288px;
+  min-height: 623px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -915,12 +964,12 @@ button {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close:hover,
+
 .modal-close:focus {
   background-color: #404bbf;
   border: none;
 }
-.modal-close:hover .icon-close,
+
 .modal-close:focus .icon-close {
   fill: white;
 }
@@ -1037,4 +1086,19 @@ button {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .modal-close:hover {
+    background-color: #404bbf;
+    border: none;
+  }
+  .modal-close:hover .icon-close {
+    fill: white;
+  }
 }
